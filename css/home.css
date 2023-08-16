@@ -1,0 +1,52 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: darkseagreen;
+    margin: 0px 0px 0px 0px;
+}
+
+#heading-div {
+    margin: 10px 0px 0px 350px;
+    height: 20%;
+    width: 100%;
+}
+
+#input-div {
+    height: 60%;
+}
+
+#museum-title-div {
+    margin: 10px 0px 0px 300px;
+}
+
+#museum_title {
+    font-family: "Triump Rg Blur W00_02", serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#dino-title-div {
+    margin: 0px 0px 0px 100px;
+}
+
+#dino-title {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-family: "Triump Rg Blur W00_02", serif;
+    font-size: 120px;
+    font-style: oblique;
+    font-weight: normal;
+    letter-spacing: 14px;
+}
+
+#compare-text-div {
+    margin: 0px 0px 0px 300px;
+}
+
+#compare-text {
+    font-family: "Triump Rg Blur W00_02", serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+}

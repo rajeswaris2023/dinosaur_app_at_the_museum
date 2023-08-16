@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinosaur App</title>
+    <meta name="viewport" content="width=device-width, height=device-height"/>
+    <link href="css/common.css" rel="preload" as="style"/>
+    <link href="css/css-dist/home.min.css" rel="preload" as="style"/>
+    <link href="css/css-dist/form.min.css" rel="preload" as="style"/>
+    <link href="css/css-dist/tiles.min.css" rel="preload" as="style"/>
+
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/css-dist/home.min.css" rel="stylesheet"/>
+    <link href="css/css-dist/form.min.css" rel="stylesheet"/>
+    <link href="css/css-dist/tiles.min.css" rel="stylesheet"/>
+
+    <script src="scripts/homepageHandler.js" type="module"></script>
+    <script src="scripts/tilesHandler.js" async></script>
+    <script src="scripts/dinosaurFactHandler.js" async></script>
+</head>
+<body>
+<div id="parent-container">
+    <div id="heading-div">
+        <div id="museum-title-div"><span id="museum_title">Natural History Museum</span></div>
+        <div id="dino-title-div"><span id="dino-title">Dinosaurs</span></div>
+        <div id="compare-text-div"><span id="compare-text">Compare with the dinosaur</span></div>
+    </div>
+    <div id="input-div">
+        <div id="input-container">
+            <form action="" method="">
+                <label for="name" class="input-label">Name</label> <br>
+                <input type="text" id="name" class="input-control" placeholder="Enter your name" autofocus required/>
+                <span class="message"></span>
+                <br>
+
+                <label class="input-label">Height</label> <br>
+                <label for="feet" class="input-sub-label">Feet</label>
+                <input type="number" class="input-control" id="feet" required/>
+                <label for="inches" class="input-sub-label">inches</label>
+                <input type="number" class="input-control" id="inches" required/>
+                <span class="message"></span> <br>
+
+                <label for="weight" class="input-label">Weight</label> <br>
+                <input type="number" class="input-control" id="weight" required/> <span class="message"></span> <br>
+                <label class="input-sub-label" id="pounds-text">pounds</label> <br>
+
+                <label for="diet" class="input-label" id="diet-text">Diet</label> <br>
+                <select id="diet" class="input-control">
+                    <option value="Herbivore">Herbivore</option>
+                    <option value="Carnivor">Carnivor</option>
+                    <option value="Omnivor">Omnivor</option>
+                </select> <br>
+
+                <input type="submit" id="compare-button" value="Compare Me!"/>
+            </form>
+        </div>
+    </div>
+</div>
+<footer id="footer-container">
+    <small>Dinosaur facts taken from britannica.com, images bought and downloaded form istockphoto.com, fonts bought and downloaded from fonts.com.
+           HomePage design taken from Udacity starter code, Pigeon facts taken from Udacity starter dino.json
+           Refer READ.ME for more reference
+    </small>
+</footer>
+</body>
+</html>

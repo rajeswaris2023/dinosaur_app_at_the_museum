@@ -1,0 +1,91 @@
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.tiles {
+    width: 99%;
+    height: 99%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 8px 0px 0px 8px;
+}
+
+.tile-div {
+    background-color: white;
+    border: 0.05mm solid lightgray;
+    height: 240px;
+}
+
+.dino-name-div {
+    background-color: palegoldenrod;
+    width: 100%;
+    height: 10%;
+}
+
+.dino-name {
+    margin-left: 180px;
+    font-family: "Arquitecta W00 Regular", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dino-pic-div {
+    margin: 0px 0px 10px 60px;
+    padding: 2px;
+    width: 99%;
+    height: 70%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 350px;
+    height: 160px;
+}
+
+.human-pic-div {
+    background-color: palegoldenrod;
+    padding: 2px;
+    width: 100%;
+    height: 90%;
+}
+
+.link-div {
+    background-color: palegoldenrod;
+    padding-left: 230px;
+    width: 100%;
+    height: 10%;
+}
+
+#back-link {
+    font-family: "Arquitecta W00 Regular", sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    color: blue;
+}
+
+#human {
+    margin: 0px 0px 10px 120px;
+    background-color: gainsboro;
+    max-width: 100%;
+    max-height: 100%;
+    width: 250px;
+    height: 300px;
+}
+
+.dino-fact-div {
+    margin: 10px 0px 0px 0px;
+    background-color: palegoldenrod;
+    width: 100%;
+    height: 15%;
+}
+
+.dino-fact {
+    margin: 0px 0px 0px 15px;
+    font-family: "Arquitecta W00 Regular", sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+    width: 300px;
+    height: 300px;
+}
