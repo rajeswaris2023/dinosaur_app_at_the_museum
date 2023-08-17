@@ -1,7 +1,19 @@
 import data from '../dinosaurs.json' assert {type: 'json'};
+
+/**
+ * @description Fetches dinosaur data from imported json file
+ * @returns {any[]} dinosaur data objects
+ */
 function getDinosaurData() {
     return data.dinosaurs;
 }
+
+/**
+ * @description Creates dinosaur object and fetches display data for each dinosaur
+ * @param {any[]} dinosaurData
+ * @param {Human} humanData
+ * @returns {Dinosaur[]}
+ */
 function getDinosaurFacts(dinosaurData, humanData) {
     let dinosaurFacts = [];
     for(let index = 0; index < dinosaurData.length; index++) {
@@ -12,6 +24,10 @@ function getDinosaurFacts(dinosaurData, humanData) {
     return dinosaurFacts;
 }
 
+/**
+ * @description Checks validatity of input elements
+ * @returns {boolean} Validity
+ */
 function validate() {
     let inputs = document.getElementsByTagName('input');
     for(let index = 0; index < inputs.length; index++) {
@@ -22,6 +38,9 @@ function validate() {
     return true;
 }
 
+/**
+ * @description Removes input form container and footer
+ */
 function removeContainers() {
     let footerElement = document.getElementById('footer-container');
     footerElement.remove();
@@ -29,6 +48,10 @@ function removeContainers() {
     parentContainer.remove();
 }
 
+/**
+ * @description Gathers inputs from form
+ * @returns {Human} Returns a human object populated with form inputs
+ */
 function getInputs() {
     const name = document.getElementById('name').value;
     const heightFeet = document.getElementById('feet').value;
@@ -39,9 +62,18 @@ function getInputs() {
     return new Human(name, heightFeet, heightInches, weight, diet);
 }
 
+/**
+ * @description Path of human image
+ * @returns {string} Returns path of human image
+ */
 function getHumanPicturePath() {
     return '../images/Human.jpg';
 }
+
+/**
+ * @description Compare button event handler
+ * @param event
+ */
 function handleCompare(event) {
     if(!validate()) {
         return;
@@ -52,7 +84,6 @@ function handleCompare(event) {
     removeContainers();
     let tiles = createTilesPage(dinosaurFacts, humanData.getName(), getHumanPicturePath());
     document.body.appendChild(tiles);
-
     event.stopPropagation();
 }
 
