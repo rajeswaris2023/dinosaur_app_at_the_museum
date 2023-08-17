@@ -2,11 +2,11 @@ body {
     width: 100%;
     height: 100%;
     background: darkseagreen;
-    margin: 0px 0px 0px 0px;
+    margin: 0 0 0 0;
 }
 
 #heading-div {
-    margin: 10px 0px 0px 350px;
+    margin: 10px 0 0 350px;
     height: 20%;
     width: 100%;
 }
@@ -16,24 +16,24 @@ body {
 }
 
 #museum-title-div {
-    margin: 10px 0px 0px 300px;
+    margin: 10px 0 0 300px;
 }
 
 #museum_title {
-    font-family: "Triump Rg Blur W00_02", serif;
+    font-family: 'Triump Rg Blur W00_02', serif;
     font-size: 20px;
     font-style: normal;
     font-weight: normal;
 }
 
 #dino-title-div {
-    margin: 0px 0px 0px 100px;
+    margin: 0 0 0 100px;
 }
 
 #dino-title {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    font-family: "Triump Rg Blur W00_02", serif;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'Triump Rg Blur W00_02', serif;
     font-size: 120px;
     font-style: oblique;
     font-weight: normal;
@@ -41,11 +41,11 @@ body {
 }
 
 #compare-text-div {
-    margin: 0px 0px 0px 300px;
+    margin: 0 0 0 300px;
 }
 
 #compare-text {
-    font-family: "Triump Rg Blur W00_02", serif;
+    font-family: 'Triump Rg Blur W00_02', serif;
     font-size: 20px;
     font-style: normal;
     font-weight: normal;

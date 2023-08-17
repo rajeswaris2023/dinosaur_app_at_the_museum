@@ -1,6 +1,6 @@
 #input-div {
     position: fixed;
-    margin: 20px 0px 0px 550px;
+    margin: 20px 0 0 550px;
     background: lightgray;
 }
 
@@ -9,15 +9,15 @@
 }
 
 .input-label {
-    margin: 20px 0px 10px 0px;
-    font-family: "Arquitecta W00 Regular", serif;
+    margin: 20px 0 10px 0;
+    font-family: 'Arquitecta W00 Regular', serif;
     font-size: 20px;
     font-style: normal;
     font-weight: bold;
 }
 
 .input-control {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0 10px 0;
     height: 30px;
 }
 
@@ -26,19 +26,19 @@
 }
 
 #name:invalid + span::after, #feet:invalid ~ span::after, #inches:invalid + span::after, #weight:invalid + span::after  {
-    content: "X";
+    content: 'X';
 }
 
 #name:valid + span:after, #weight:valid + span::after {
-    content: "✓";
+    content: '✓';
 }
 
 #feet:valid, #inches:valid + span::after {
-    content: "✓";
+    content: '✓';
 }
 
 #compare-button {
-    margin: 10px 0px 10px 160px;
+    margin: 10px 0 10px 160px;
     height: 35px;
     width: 100px;
     background: darkkhaki;
@@ -47,13 +47,13 @@
 footer {
     height: 30px;
     width: 100%;
-    margin: 490px 0px 0px 0px;
-    padding: 5px 0px 0px 30px;
+    margin: 490px 0 0 0;
+    padding: 5px 0 0 30px;
     background-color: darkkhaki;
 }
 
 footer > small {
-    font-family: "Arquitecta W00 Regular", serif;
+    font-family: 'Arquitecta W00 Regular', serif;
     font-size: 13px;
     font-style: normal;
     font-weight: normal;

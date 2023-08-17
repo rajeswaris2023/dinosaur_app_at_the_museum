@@ -2,18 +2,18 @@ import data from '../dinosaurs.json' assert {type: 'json'};
 function getDinosaurData() {
     return data.dinosaurs;
 }
-function getDinosaurFacts(dinosaurData, humanWeight, humanHeightFeet, humanHeightInches) {
+function getDinosaurFacts(dinosaurData, humanData) {
     let dinosaurFacts = [];
     for(let index = 0; index < dinosaurData.length; index++) {
         let dinosaur = new Dinosaur(dinosaurData[index].species, dinosaurData[index].weight, dinosaurData[index].height,
-            dinosaurData[index].diet, dinosaurData[index].period, dinosaurData[index].fact);
-        dinosaurFacts[index] = dinosaur.getDisplayData(humanWeight, humanHeightFeet, humanHeightInches);
+            dinosaurData[index].diet, dinosaurData[index].when, dinosaurData[index].fact);
+        dinosaurFacts[index] = dinosaur.getDisplayData(humanData);
     }
     return dinosaurFacts;
 }
 
 function validate() {
-    let inputs = document.getElementsByTagName("input");
+    let inputs = document.getElementsByTagName('input');
     for(let index = 0; index < inputs.length; index++) {
         if(inputs[index].checkValidity() === false) {
             return false;
@@ -23,42 +23,40 @@ function validate() {
 }
 
 function removeContainers() {
-    let footerElement = document.getElementById("footer-container");
+    let footerElement = document.getElementById('footer-container');
     footerElement.remove();
-    let parentContainer = document.getElementById("parent-container");
+    let parentContainer = document.getElementById('parent-container');
     parentContainer.remove();
 }
 
 function getInputs() {
-    const humanWeight = document.getElementById("weight").value;
-    const humanHeightFeet = document.getElementById("feet").value;
-    const humanHeightInches = document.getElementById("inches").value;
+    const name = document.getElementById('name').value;
+    const heightFeet = document.getElementById('feet').value;
+    const heightInches = document.getElementById('inches').value;
+    const weight = document.getElementById('weight').value;
+    const diet = document.getElementById('diet').value;
 
-    return {
-        weight: humanWeight,
-        heightFeet: humanHeightFeet,
-        heightInches: humanHeightInches
-    };
+    return new Human(name, heightFeet, heightInches, weight, diet);
 }
 
 function getHumanPicturePath() {
-    return "../images/Human.jpg";
+    return '../images/Human.jpg';
 }
 function handleCompare(event) {
     if(!validate()) {
         return;
     }
-    let inputs = getInputs();
-    const dinosaurFacts = getDinosaurFacts(getDinosaurData(), inputs.weight, inputs.heightFeet, inputs.heightInches);
+    let humanData = getInputs();
+    const dinosaurFacts = getDinosaurFacts(getDinosaurData(), humanData);
 
     removeContainers();
-    let tiles = createTilesPage(dinosaurFacts, getHumanPicturePath());
+    let tiles = createTilesPage(dinosaurFacts, humanData.getName(), getHumanPicturePath());
     document.body.appendChild(tiles);
 
     event.stopPropagation();
 }
 
-let compareButton = document.getElementById("compare-button");
+let compareButton = document.getElementById('compare-button');
 compareButton.addEventListener(
     'click',
     handleCompare,
